@@ -1,0 +1,545 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ifis.OrderEntryActivity" >
+
+    <LinearLayout
+        android:id="@+id/srch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <AutoCompleteTextView
+            android:singleLine="true"
+            android:inputType="textNoSuggestions"          
+            android:id="@+id/autoCompleteTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" 
+            android:hint="Search for Stock" >
+			
+            <requestFocus />
+           
+        </AutoCompleteTextView>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/srch"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:background="#CFCFCF" />
+
+    <LinearLayout
+        android:layout_below="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+    
+
+   <LinearLayout
+        android:layout_weight="1"
+        android:background="@drawable/card_layout"
+        android:id="@+id/detailLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/stockNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"                
+                android:text="TextView"
+                android:textAppearance="@android:style/TextAppearance.Holo.Widget.IconMenu.Item"
+                android:textSize="20sp" />
+            
+            
+            <TextView
+                android:id="@+id/lastTv"
+                android:layout_toLeftOf="@+id/lastTvValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:layout_alignBaseline="@+id/stockNameTv"
+                android:text="Last:"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/lastTvValue"
+                android:layout_marginLeft="3dp"
+                android:layout_alignBaseline="@+id/stockNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.000"
+                android:textSize="15sp" />
+
+           
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+			    <ProgressBar
+                android:id="@+id/stockProcess"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+            
+            <TextView
+                android:id="@+id/lotSizeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/text_color"
+                android:text="Lot Size:"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/lotSizeTvValue"
+                android:layout_toRightOf="@+id/lotSizeTv"
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/bidTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/bidTvValue"
+                android:textColor="@color/text_color"
+                android:text="Bid:"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/bidTvValue"
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.000"
+                android:textSize="15sp" />
+
+            
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/changeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="TextView"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/askTv"
+                android:layout_toLeftOf="@+id/askTvValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="Ask:"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/askTvValue"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.000"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+     
+
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="5"
+        android:id="@+id/buyLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"        
+        android:background="@drawable/borderbluesolidwhite"
+        android:orientation="vertical" >
+        
+        
+         <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            
+             
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limit" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/textView4"
+                android:layout_toRightOf="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/buyGreen"
+                android:text="B :" />
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/textView4"
+                android:id="@+id/buyLtTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/buyLtTV"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cellRed"
+                android:text="S :" />
+            
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/textView"
+                android:id="@+id/sellLtTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-" />
+
+        </RelativeLayout>
+        
+
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+             >
+
+           
+
+            <TextView
+                android:textColor="@color/text_color"
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/accountNo"
+                android:textSize="16sp" />
+             <ImageButton
+                    android:background="@android:color/transparent"
+                    android:layout_toLeftOf="@+id/accDisp1"
+                    android:id="@+id/searchAccButton2"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="didClickAccSrch"
+                    android:src="@android:drawable/ic_menu_search" />
+
+               <EditText  
+                
+                android:textSize="12sp"
+                android:clickable="false" 
+        		android:cursorVisible="false" 
+        		android:focusable="false"
+        		android:focusableInTouchMode="false"             
+                android:id="@+id/accDisp1"
+                android:layout_width="160dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:hint="Select Account"
+                android:layout_centerVertical="true"
+                android:background="@drawable/readonly_box"
+                android:ems="10"
+                android:gravity="center"
+                android:imeActionLabel="Done"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@color/text_main_color" >
+            </EditText>
+
+        </RelativeLayout>
+        
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:textColor="@color/text_color"
+                android:text="@string/action"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/borderbluesolidwhite"
+                android:id="@+id/radioGroup1"
+                android:layout_width="160dp"
+               	android:gravity="center"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:text="BUY" />
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SELL" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+       
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_color"
+                android:text="@string/orderPrice"
+                android:textSize="16sp" />
+
+            <EditText                
+                android:id="@+id/orderPriceET"
+                android:layout_width="160dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borderbluesolidwhite"
+                android:ems="10"
+                android:gravity="center"
+             	android:textSize="16sp"
+                android:imeActionLabel="Done"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:labelFor="@id/orderPriceET"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@color/text_main_color" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_color"
+                android:text="@string/qty"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/qtyET"
+                android:layout_width="160dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borderbluesolidwhite"
+                android:ems="10"
+             	android:textSize="16sp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:imeActionLabel="Done"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:labelFor="@id/qtyET"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@color/text_main_color" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+             >
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_color"
+                android:text="@string/paymentType"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/paymentTypeTV"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:gravity="left"
+                android:text="CASH"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+           android:paddingTop="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_color"
+                android:text="@string/currency"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/currencyTV"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:gravity="left"
+                android:text="SGD"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_color"
+                android:text="@string/exchange"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/destinationTV"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:gravity="left"                         
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            >
+
+            <Button
+                android:id="@+id/buyORsellBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/greenbutton"
+                android:onClick="didClickBuyButton"
+                android:text="BUY"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+       
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

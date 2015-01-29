@@ -1,0 +1,244 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ifis.OrderBookActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+          
+            <LinearLayout
+                android:layout_margin="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+           
+               android:orientation="horizontal"      
+            
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+            
+               <SearchView
+                   android:layout_weight="1"
+        			android:id="@+id/searchView1"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			>
+    			</SearchView>
+            
+        
+
+            <com.example.ifis.utilities.SegmentedRadioGroup
+               
+                   android:layout_weight="4"
+                android:layout_width="wrap_content"       
+				android:layout_height="wrap_content"
+				android:layout_margin="5dip"
+				android:orientation="horizontal"
+				android:id="@+id/segment_text"
+				android:checkedButton="@+id/button_one">
+					<RadioButton android:id="@id/button_one"
+					    android:layout_weight="1"
+		    			android:layout_width="wrap_content"
+						android:minWidth="60dp"
+						android:minHeight="33dip"
+						android:text="All"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:button="@null"
+						android:gravity="center"
+						android:textColor="@drawable/radio_colors" />
+					<RadioButton android:id="@+id/button_two"
+					    android:layout_width="wrap_content"
+					    android:layout_weight="1"
+						android:minWidth="60dp"
+						android:minHeight="33dip"
+						android:text="Filled"
+						android:button="@null"
+						android:gravity="center"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textColor="@drawable/radio_colors" />
+					    
+		    
+					<RadioButton android:id="@+id/button_three"
+		     			android:layout_width="wrap_content"
+						android:minWidth="60dp"
+					    android:layout_weight="1"
+						android:minHeight="33dip"
+						android:text="Queue"
+						android:button="@null"
+						android:gravity="center"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textColor="@drawable/radio_colors"
+                />
+		</com.example.ifis.utilities.SegmentedRadioGroup>
+		
+            <ImageButton
+                   android:layout_weight="1"
+                android:id="@+id/canclBtn"
+                android:background="@android:color/transparent"
+                
+                android:src="@drawable/ic_action_refresh"
+               	android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:button="@null"
+				android:gravity="center_horizontal"
+				android:layout_marginTop="7dp"
+                android:onClick="didClickRefresh"   
+       			/>
+        
+
+        </LinearLayout>
+
+          
+        <LinearLayout
+                
+            
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+           
+            android:background="@drawable/table_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+                
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stock(Action)"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+                
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+                
+                <TextView
+                    android:id="@+id/textView3"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Price"
+                    android:textSize="15sp"
+                    android:textStyle="bold"                    
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:id="@+id/textView4"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qty."
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+                  <TextView
+                    android:id="@+id/textView6"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qty. Filled"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                
+                
+            </RelativeLayout>
+             <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+                
+                 <TextView
+                    android:id="@+id/textView5"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+      
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ListView
+                
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingRight="5dp"
+            
+            android:background="@drawable/borderbluesolidwhite"
+            android:id="@+id/orderListView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+        </ListView>
+
+    </LinearLayout>
+    
+    <ProgressBar
+            android:id="@+id/progressBarList"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    
+    <TextView
+            android:id="@+id/emtyListTV"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List empty"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+</RelativeLayout>

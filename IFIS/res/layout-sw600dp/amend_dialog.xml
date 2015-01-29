@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewAO1"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Price" />
+
+        <TextView
+            android:id="@+id/amendOPTV"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.000" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+         <TextView
+            android:id="@+id/textViewAO2"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Qty." />
+
+        <TextView
+            android:id="@+id/amendOQTV"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00,000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+         <TextView
+            android:id="@+id/textViewAO3"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Match Qty." />
+
+        <TextView
+            android:id="@+id/amendMQTV"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00,000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+         <TextView
+            android:id="@+id/textViewAO4"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Price" />
+
+         <EditText
+             android:id="@+id/amendNewPET"
+             android:layout_marginRight="10dp"
+             android:inputType="numberDecimal"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:ems="10" >
+
+             <requestFocus />
+         </EditText>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView
+            android:id="@+id/textViewAO5"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Qty" />
+
+         <EditText
+             android:id="@+id/amendNewQET"
+             android:layout_marginRight="10dp"
+             android:inputType="number"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:ems="10" >
+
+             <requestFocus />
+         </EditText>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/Amendok"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="didClickAmendOk"
+            android:text="OK" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/amendCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="didClickAmendCancel"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        
+        
+        
+        
+         
+   
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            
+            <TextView
+                
+                android:layout_marginBottom="4dp"
+                android:id="@+id/textViewC"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="15sp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="UserID" />
+            
+            
+            <EditText
+                
+                android:clickable="false" 
+        		android:cursorVisible="false" 
+        		android:focusable="false"
+        		android:focusableInTouchMode="false"
+                android:layout_marginBottom="4dp"
+                android:id="@+id/pwduserIDTV"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="15sp"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="UserID" />
+
+            
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+            <TextView
+                android:layout_marginBottom="4dp"
+                android:id="@+id/textViewC2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="15sp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Old Password" />
+            
+            <EditText
+                
+                android:inputType="textPassword"
+            	android:maxLines="1"
+                android:id="@+id/oldPwdET"
+                android:layout_alignParentRight="true"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+            
+            <TextView
+                android:layout_marginBottom="4dp"
+                android:id="@+id/textViewC3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="15sp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="New Password" />
+            
+            <EditText
+                
+                android:inputType="textPassword"
+            	android:maxLines="1"
+                android:id="@+id/newPwd1ET"
+                android:layout_alignParentRight="true"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+           android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:id="@+id/textViewC4"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="4dp"
+                android:maxLines="2"
+                android:text="Confirm New Password"
+                android:textSize="15sp" />
+            
+            <EditText
+                
+                android:inputType="textPassword"
+            	android:maxLines="1"
+                android:id="@+id/newPwd2ET"
+                android:layout_alignParentRight="true"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                 />
+        </RelativeLayout>
+
+        <LinearLayout
+            
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="SAVE" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="Cancel" />
+        </LinearLayout>
+
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </RelativeLayout>
+
+       
+
+</LinearLayout>

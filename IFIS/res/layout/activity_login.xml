@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.example.ifis.LoginActivity" >
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+       
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/borderbluesolidwhite"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp" >
+
+        <EditText
+            android:drawableLeft="@drawable/ic_action_person"
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/noTextBackground"
+            android:ems="10"
+            android:hint="User Name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColorHint="@color/hinttextcolor" >
+        </EditText>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#CFCFCF" />
+
+        <EditText
+            android:drawableLeft="@drawable/ic_action_secure"
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/noTextBackground"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColorHint="#CFCFCF" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/linearLayout2"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/login_button"
+        android:onClick="didClickLoginButton"
+        android:text="@string/login"
+        android:textSize="20sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/ifisGreen" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/picLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/ifis_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picLayout"
+        android:orientation="vertical"
+        android:padding="35dp" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_toRightOf="@+id/viewA2"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/thomson_logo" />
+                <View
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+            android:id="@+id/viewA2"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#CFCFCF"
+             />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/viewA2"
+            
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Powered By"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:id="@+id/changePwdTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginBtn"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:onClick="clickChangePassword"
+        android:text="@string/forgetPwd"
+        android:textColor="@android:color/darker_gray" />
+    
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:id="@+id/changeSvcTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changePwdTV"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:onClick="clickChangePassword"
+        android:text="Change Service"
+        android:textColor="@android:color/darker_gray" />
+
+</RelativeLayout>

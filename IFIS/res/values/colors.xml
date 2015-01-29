@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_main_color">#6c6c6e</color>
+    <color name="blue">#4582ec</color>
+    <color name="red">#ED777D</color>
+    <color name="green">#88DB9D</color>
+    <color name="text_color">#6c6c6e</color>
+    <color name="ifisGreen">#ACB700</color>
+    <color name="ifisGray">#929090</color>
+    <color name="noTextBackground">#00000000</color>
+    <color name="hinttextcolor">#CFCFCF</color>
+    <color name="buyGreen">#008000</color>
+    <color name="cellRed">#CC0000</color>
+     <color name="readOnly">#F1F1F1</color>
+</resources>

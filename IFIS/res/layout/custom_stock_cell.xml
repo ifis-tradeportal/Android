@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+     android:paddingTop="5dp"
+            	android:paddingBottom="5dp"
+            	android:paddingLeft="5dp"
+            	android:paddingRight="5dp"
+            	android:layout_marginRight="5dp" >
+    
+    
+    <RelativeLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content" >
+                         <TextView
+                            	android:textColor="@android:color/black"
+                    			android:textSize="15sp"
+                    			android:textStyle="bold"
+                    			android:layout_gravity="left"
+               					android:id="@+id/stkCodeACCTV"
+                				android:layout_width="wrap_content"
+                				android:layout_height="wrap_content"
+                				android:layout_alignParentLeft="true"
+                				android:layout_centerVertical="true"
+                				android:text="Stock Code"
+                				android:textAppearance="?android:attr/textAppearanceSmall" />
+                          
+                         
+                          <TextView
+                              android:textColor="@android:color/black"
+                    			android:textSize="15sp"
+                    			android:textStyle="bold"
+                    			android:gravity="right"
+                				android:id="@+id/stkAvlblACCTV"
+                				android:layout_marginLeft="15dp"
+                				android:layout_alignParentRight="true"
+                				android:layout_width="wrap_content"
+                				android:layout_height="wrap_content"
+                				android:layout_centerHorizontal="true"
+                				android:layout_centerVertical="true"
+                				android:text="Shares Available"
+                				/>
+                          
+                         
+                          
+                          
+                         
+                     </RelativeLayout>
+
+                     <RelativeLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content" >
+                          
+                         
+                          
+                           <TextView
+                            	android:textColor="@android:color/black"
+                    			android:textSize="13sp"                    			
+                    			android:layout_gravity="left"
+               					android:id="@+id/stkNameACCTV"                				
+                				android:layout_width="wrap_content"
+                				android:layout_height="wrap_content"
+                				android:layout_alignParentLeft="true"
+                				android:layout_centerVertical="true"
+                				android:text="Stock Name"
+                				android:textAppearance="?android:attr/textAppearanceSmall" />
+                          
+                          <TextView
+                              android:textColor="@android:color/black"
+                    			android:textSize="13sp"
+                    			android:gravity="right"
+                				android:id="@+id/stkLocACCTV"
+                				android:layout_marginLeft="15dp"
+                				android:layout_width="wrap_content"
+                				android:layout_height="wrap_content"
+                				android:layout_alignParentRight="true"
+                				android:layout_centerVertical="true"
+                				android:text="location"
+                				/>
+                         
+                     </RelativeLayout>
+    
+
+</LinearLayout>
